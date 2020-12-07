@@ -1,0 +1,108 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+    ),
+    home: Home(),
+  ));
+}
+
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Welcome To Knos!',
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.0,
+            color: Colors.black,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: Row(
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Image(
+              width: 35,
+              height: 35,
+              image: AssetImage('asset/knos.jpg'),
+            ),
+          ),
+          Expanded(
+            flex: 8,
+            child: Container(
+              padding: EdgeInsets.all(25),
+              child: Text('Knos Developers'),
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.textsms,
+        ),
+      ),
+    );
+  }
+}
+
+//Column(
+//   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//   crossAxisAlignment: CrossAxisAlignment.center,
+//   children: <Widget>[
+//     Row(
+//       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//       children: <Widget>[
+//         Text('Welcome To Team Knos'),
+//         FlatButton(
+//           onPressed: () {},
+//           color: Colors.amber,
+//           child: Text('Click To Join'),
+//         ),
+//         Container(
+//           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+//           color: Colors.black45,
+//           child: Text('Team Knos'),
+//         ),
+//       ],
+//     ),
+//     Container(
+//       padding: EdgeInsets.all(20),
+//       color: Colors.black45,
+//       child: Text('Welcome To Team Knos'),
+//     ),
+//     Container(
+//       padding: EdgeInsets.all(25),
+//       color: Colors.cyan,
+//       child: Text('We Are New'),
+//     ),
+//     Container(
+//       padding: EdgeInsets.all(30),
+//       color: Colors.blue,
+//       child: Text('We will teach you'),
+//     ),
+//     Center(
+//       child: RaisedButton.icon(
+//         onPressed: () {},
+//         icon: Icon(
+//           Icons.contact_phone,
+//         ),
+//         label: Text('CONTACT US'),
+//         color: Colors.lime,
+//       ),
+//     ),
+//     Image(
+//       image: AssetImage('asset/knos.jpg'),
+//     ),
+//   ],
+// ),
