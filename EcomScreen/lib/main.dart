@@ -56,13 +56,30 @@ class _EcomScreenState extends State<EcomScreen> {
                 )
               ],
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: carousal(),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 Text(
                   "More Categories",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Expanded(
+              child: CategoriesList(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,6 +94,12 @@ class _EcomScreenState extends State<EcomScreen> {
                 )
               ],
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: Grid(),
+            )
           ],
         ),
       ),
@@ -104,7 +127,7 @@ class _EcomScreenState extends State<EcomScreen> {
               onPressed: () {},
             ),
             SizedBox(
-              width: 120,
+              width: 100,
             ),
             IconButton(
               icon: Icon(Icons.shopping_cart),
